@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="303dp"
+        android:layout_height="150dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/joli_image"
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:src="@drawable/jolibee"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/joli_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jollibee"
+            android:layout_toRightOf="@+id/joli_image"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="true"
+            android:textColor="@color/black"/>
+
+        <RatingBar
+            android:id="@+id/joli_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_below="@id/joli_title"
+            android:layout_toRightOf="@id/joli_image"
+            android:layout_marginLeft="10dp"
+            android:rating="4"/>
+
+        <TextView
+            android:id="@+id/joli_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thực đơn Jollibee đa dạng và phong phú, có rất nhiều sự lựa chọn cho bạn."
+            android:layout_below="@id/joli_rating"
+            android:layout_toRightOf="@id/joli_image"
+            android:padding="10dp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

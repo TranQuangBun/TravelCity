@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Travel City</string>
+
+    <string name="featured_locations">Tất cả các vị trí nổi bật</string>
+    <string name="featured_locations_description">Tất cả các vị trí nổi tiếng và được rating cao ở trong thành phố !</string>
+    <string name="most_viewed_locations">Xem nhiều nhất</string>
+    <string name="categories">Thể loại</string>
+    <string name="view_all">Xem tất cả</string>
+    <string name="search_text">Tìm kiếm ..</string>
+
+
+    <string name="slogan_name">Chúng tôi sẽ giúp bạn tìm địa điểm !</string>
+    <string name="logo_name">CITY TRAVEL</string>
+</resources>

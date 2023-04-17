@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "533358930821",
+    "project_id": "travel-city-6594a",
+    "storage_bucket": "travel-city-6594a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533358930821:android:5902bf57a295c2472772ec",
+        "android_client_info": {
+          "package_name": "com.example.travelcity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533358930821-sts5oqj189aon1spbg6qsm8uu97qddk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx4eRYJXniZzmuOC2J2ERyLfNmlDN429I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533358930821-sts5oqj189aon1spbg6qsm8uu97qddk9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
