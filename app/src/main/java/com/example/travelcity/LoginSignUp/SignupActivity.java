@@ -38,7 +38,6 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 database = FirebaseDatabase.getInstance();
-
                 reference = database.getReference("users");
 
                 String name = signupName.getText().toString();

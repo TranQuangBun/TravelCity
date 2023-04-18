@@ -19,10 +19,10 @@ import com.example.travelcity.HomeAdapter.FeaturedAdpater;
 import com.example.travelcity.HomeAdapter.FeaturedHelperClass;
 import com.example.travelcity.HomeAdapter.MostViewAdapter;
 import com.example.travelcity.HomeAdapter.MostViewHelperClass;
+import com.example.travelcity.UserDashBoard.ProfileActivity;
 import com.example.travelcity.Map.MapLocation;
 import com.example.travelcity.Map.TypeMap;
 import com.example.travelcity.UserDashBoard.AllCategories;
-import com.example.travelcity.UserDashBoard.ProfileActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;

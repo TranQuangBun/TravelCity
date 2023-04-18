@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.travelcity.MainActivity;
 import com.example.travelcity.R;
+import com.example.travelcity.UserDashBoard.ProfileActivity;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -70,6 +71,7 @@ public class LoginActivity extends AppCompatActivity {
             return true;
         }
     }
+
     public Boolean validatePassword(){
         String val = loginPassword.getText().toString();
         if (val.isEmpty()) {
@@ -80,6 +82,7 @@ public class LoginActivity extends AppCompatActivity {
             return true;
         }
     }
+
     public void checkUser(){
         String userUsername = loginUsername.getText().toString().trim();
         String userPassword = loginPassword.getText().toString().trim();
@@ -106,12 +109,13 @@ public class LoginActivity extends AppCompatActivity {
                         String usernameFromDB =
                                 snapshot.child(userUsername).child("username").getValue(String.class);
 
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
 
                         intent.putExtra("name", nameFromDB);
                         intent.putExtra("email", emailFromDB);
                         intent.putExtra("username", usernameFromDB);
                         intent.putExtra("password", passwordFromDB);
+
                         startActivity(intent);
                     } else {
                         loginPassword.setError("Dữ liệu không hợp lệ!");
