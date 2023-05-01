@@ -19,6 +19,7 @@ import com.example.travelcity.HomeAdapter.FeaturedAdpater;
 import com.example.travelcity.HomeAdapter.FeaturedHelperClass;
 import com.example.travelcity.HomeAdapter.MostViewAdapter;
 import com.example.travelcity.HomeAdapter.MostViewHelperClass;
+import com.example.travelcity.LoginSignUp.LoginActivity;
 import com.example.travelcity.UserDashBoard.ProfileActivity;
 import com.example.travelcity.Map.MapLocation;
 import com.example.travelcity.Map.TypeMap;
@@ -129,7 +130,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     //Call trang thoong tin nguoi dung
     public void playUserInformation(View view) {
-        startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+        startActivity(intent);
     }
 
     //function chuyển hướng khi nhấn ( ở menu)

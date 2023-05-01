@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.travelcity.MainActivity;
 import com.example.travelcity.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -39,6 +40,7 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 passUserData();
+                callMain();
             }
         });
     }
@@ -60,7 +62,6 @@ public class ProfileActivity extends AppCompatActivity {
 
 
 //    Update data User
-
     public void passUserData(){
 
         String userUsername = profileUsername.getText().toString().trim();
@@ -92,4 +93,12 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
     }
+
+//    Call Main Screen
+
+    public void callMain(){
+        Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }
