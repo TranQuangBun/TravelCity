@@ -22,7 +22,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     TextView profileName, profileEmail, profileUsername, profilePassword;
     TextView titleName, titleUsername;
-    Button editProfile;
+    Button editProfile,callMainActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,12 @@ public class ProfileActivity extends AppCompatActivity {
         titleName = findViewById(R.id.titleName);
         titleUsername = findViewById(R.id.titleUsername);
         editProfile = findViewById(R.id.editButton);
+        callMainActivity = findViewById(R.id.callMainActivity);
+
+
         showAllUserData();
+
+
         editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,22 +48,47 @@ public class ProfileActivity extends AppCompatActivity {
                 callMain();
             }
         });
+        callMainActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                callMain();
+            }
+        });
     }
     public void showAllUserData(){
-        Intent intent = getIntent();
+        String userUsername = profileUsername.getText().toString().trim();
 
-        String nameUser = intent.getStringExtra("name");
-        String emailUser = intent.getStringExtra("email");
-        String usernameUser = intent.getStringExtra("username");
-        String passwordUser = intent.getStringExtra("password");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+        Query checkUserDatabase = reference.orderByChild("username").equalTo(userUsername);
 
-        titleName.setText(nameUser);
-        titleUsername.setText(usernameUser);
-        profileName.setText(nameUser);
-        profileEmail.setText(emailUser);
-        profileUsername.setText(usernameUser);
-        profilePassword.setText(passwordUser);
+        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if (snapshot.exists()){
+                Intent intent = getIntent();
+
+                String nameUser = intent.getStringExtra("name");
+                String emailUser = intent.getStringExtra("email");
+                String usernameUser = intent.getStringExtra("username");
+                String passwordUser = intent.getStringExtra("password");
+
+                titleName.setText(nameUser);
+                titleUsername.setText(usernameUser);
+                profileName.setText(nameUser);
+                profileEmail.setText(emailUser);
+                profileUsername.setText(usernameUser);
+                profilePassword.setText(passwordUser);
+                    startActivity(intent);
+             }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
+
 
 
 //    Update data User
