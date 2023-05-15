@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,6 +21,10 @@ import com.example.travelcity.HomeAdapter.FeaturedHelperClass;
 import com.example.travelcity.HomeAdapter.MostViewAdapter;
 import com.example.travelcity.HomeAdapter.MostViewHelperClass;
 import com.example.travelcity.LoginSignUp.LoginActivity;
+import com.example.travelcity.SaveProcessTravel.DetailActivity;
+import com.example.travelcity.SaveProcessTravel.MainUpload;
+import com.example.travelcity.SaveProcessTravel.UploadActivity;
+import com.example.travelcity.UserDashBoard.EditProfileActivity;
 import com.example.travelcity.UserDashBoard.ProfileActivity;
 import com.example.travelcity.Map.MapLocation;
 import com.example.travelcity.Map.TypeMap;
@@ -90,8 +95,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     // Chia tỷ lệ View dựa trên độ lệch slide hiện tại ( di chuyển layout userDashBoard khi mở menu )
     private void animateNaviagationDrawer() {
-//        set color when menu move out
-//        drawerLayout.setScrimColor(getResources().getColor(R.color.colorPrimary));
+
         drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
             @Override
             public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
@@ -147,9 +151,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(getApplicationContext(), AllCategories.class));
                 break;
 
-            case R.id.nav_add_missing_place:
+            case R.id.nav_savetravel:
+                startActivity(new Intent(getApplicationContext(), MainUpload.class));
+                break;
+
+            case R.id.type_map:
                 startActivity(new Intent(getApplicationContext(), TypeMap.class));
                 break;
+
+            case R.id.nav_login:
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                break;
+
+            case R.id.nav_logout:
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                break;
+
+            case R.id.nav_hotel:
+                Intent intent=new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://www.google.com/travel/search?q=khach%20san%20o%20da%20nang&g2lb=2502548%2C2503771%2C2503781%2C4258168%2C4270442%2C4284970%2C4291517%2C4306835%2C4597339%2C4757164%2C4814050%2C4850738%2C4864715%2C4874190%2C4886480%2C4893075%2C4920132%2C4924070%2C4936396%2C4965990%2C4968087%2C4972345%2C4985711%2C4990494%2C4991446%2C72247955%2C72248281%2C72248644%2C72253158&hl=vi-VN&gl=vn&cs=1&ssta=1&ts=CAESCAoCCAMKAggDGhwSGhIUCgcI5w8QBRgKEgcI5w8QBRgLGAEyAhAAKgcKBToDVk5E&qs=CAE4Bg&ap=SABoAQ&ictx=1&ved=0CAAQ5JsGahcKEwiwiquV8OX-AhUAAAAAHQAAAAAQCw"));
+                startActivity(intent);
+                break;
+
+            case R.id.nav_restaurant:
+                Intent intent1=new Intent(Intent.ACTION_VIEW);
+                intent1.setData(Uri.parse("https://www.google.com/search?tbs=lf:1,lf_ui:9&tbm=lcl&q=nha+hang+o+da+nang&rflfq=1&num=10&ved=2ahUKEwjjvJrQ8eX-AhXS6jgGHdkaDp4QtgN6BAhSEAg#rlfi=hd:;si:;mv:[[16.088883,108.25107589999999],[16.0424054,108.1528541]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:9"));
+                startActivity(intent1);
+                break;
+
         }
         return true;
 

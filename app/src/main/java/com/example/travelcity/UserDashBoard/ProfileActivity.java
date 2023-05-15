@@ -45,7 +45,6 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 passUserData();
-                callMain();
             }
         });
         callMainActivity.setOnClickListener(new View.OnClickListener() {
@@ -55,17 +54,9 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
     }
+
     public void showAllUserData(){
-        String userUsername = profileUsername.getText().toString().trim();
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-        Query checkUserDatabase = reference.orderByChild("username").equalTo(userUsername);
-
-        checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                if (snapshot.exists()){
                 Intent intent = getIntent();
 
                 String nameUser = intent.getStringExtra("name");
@@ -79,17 +70,10 @@ public class ProfileActivity extends AppCompatActivity {
                 profileEmail.setText(emailUser);
                 profileUsername.setText(usernameUser);
                 profilePassword.setText(passwordUser);
+
                     startActivity(intent);
-             }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
     }
-
-
 
 //    Update data User
     public void passUserData(){

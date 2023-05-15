@@ -49,7 +49,6 @@ public class FeaturedAdpater extends RecyclerView.Adapter<FeaturedAdpater.Featur
 
     @Override
     public int getItemCount() {
-
         return featuredLocations.size();
     }
 

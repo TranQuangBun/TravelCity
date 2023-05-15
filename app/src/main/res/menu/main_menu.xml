@@ -16,12 +16,12 @@
             android:icon="@drawable/categories_icon_menu"/>
 
         <item
-            android:id="@+id/nav_search"
-            android:title="TÌM KIẾM"
-            android:icon="@drawable/search_icon"/>
+            android:id="@+id/nav_savetravel"
+            android:title="LƯU CHUYẾN ĐI"
+            android:icon="@drawable/ic_baseline_save_24"/>
 
         <item
-            android:id="@+id/nav_add_missing_place"
+            android:id="@+id/type_map"
             android:title="CÁC LOẠI BẢN ĐỒ"
             android:icon="@drawable/map_icon"/>
 
@@ -66,7 +66,7 @@
                     android:icon="@drawable/airport_icon"/>
 
                 <item
-                    android:id="@+id/nav_shop"
+                    android:id="@+id/nav_hospital"
                     android:title="Bệnh viện"
                     android:icon="@drawable/hospital_icon"/>
             </group>
