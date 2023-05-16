@@ -20,6 +20,7 @@
         android:focusable="false"
         android:background="@drawable/lavender_border"/>
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_below="@id/search"
         android:layout_marginTop="10dp"

@@ -10,6 +10,7 @@
     tools:context=".MainActivity"
     tools:openDrawer="start">
 
+
 <com.google.android.material.navigation.NavigationView
     android:id="@+id/navigation_view"
     android:layout_width="match_parent"

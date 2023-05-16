@@ -18,6 +18,7 @@
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -69,7 +70,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:id="@+id/updateLang"
+                android:id="@+id/updateDate"
                 android:background="@drawable/lavender_border"
                 android:layout_marginTop="20dp"
                 android:padding="16dp"

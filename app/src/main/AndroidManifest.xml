@@ -19,7 +19,7 @@
         android:theme="@style/Theme.TravelCity"
         tools:targetApi="31">
         <activity
-            android:name=".UpdateActivity"
+            android:name=".SaveProcessTravel.UpdateActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

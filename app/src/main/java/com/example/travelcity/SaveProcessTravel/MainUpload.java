@@ -48,6 +48,7 @@ public class MainUpload extends AppCompatActivity {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(MainUpload.this, 1);
         recyclerView.setLayoutManager(gridLayoutManager);
 
+
         AlertDialog.Builder builder = new AlertDialog.Builder(MainUpload.this);
         builder.setCancelable(false);
         builder.setView(R.layout.process_loading_travel);
@@ -56,7 +57,6 @@ public class MainUpload extends AppCompatActivity {
 
 
         datalist = new ArrayList<>();
-
 
         adapter = new MyAdapter(MainUpload.this, datalist);
         recyclerView.setAdapter(adapter);
@@ -82,6 +82,7 @@ public class MainUpload extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+
 
 
 //        Search part
